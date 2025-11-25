@@ -22,6 +22,9 @@ RUN npm install
 
 COPY . .
 
+# Set production environment
+ENV NODE_ENV=production
+
 # Build Next.js app
 RUN npm run build
 
