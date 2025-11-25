@@ -3,7 +3,7 @@
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
 
-export async function login(formData: FormData) {
+export async function login(prevState: any, formData: FormData) {
     const password = formData.get('password');
     const envPassword = process.env.PASSWORD || 'admin'; // Default password if not set
 
